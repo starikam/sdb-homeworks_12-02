@@ -125,6 +125,49 @@ SHOW TABLES;
 
 <img width="316" height="635" alt="image" src="https://github.com/user-attachments/assets/bcbfd283-43dc-48ef-8773-90ba94805c1a" />
 
+### Задание 2
 
+Выполним запрос к БД:
+```
+SELECT 
+    TABLE_NAME, 
+    COLUMN_NAME AS PRIMARY_KEY
+FROM 
+    information_schema.KEY_COLUMN_USAGE
+WHERE 
+    TABLE_SCHEMA = 'sakila'
+    AND CONSTRAINT_NAME = 'PRIMARY'
+ORDER BY 
+    TABLE_NAME;
+```
+
+Получим ответ в виде таблицы:
+
+<img width="302" height="475" alt="image" src="https://github.com/user-attachments/assets/6823adbe-ab04-4b0b-9730-18a2980c12b4" />
+
+```
++---------------+--------------+
+| TABLE_NAME    | PRIMARY_KEY  |
++---------------+--------------+
+| actor         | actor_id     |
+| address       | address_id   |
+| category      | category_id  |
+| city          | city_id      |
+| country       | country_id   |
+| customer      | customer_id  |
+| film          | film_id      |
+| film_actor    | actor_id     |
+| film_actor    | film_id      |
+| film_category | film_id      |
+| film_category | category_id  |
+| film_text     | film_id      |
+| inventory     | inventory_id |
+| language      | language_id  |
+| payment       | payment_id   |
+| rental        | rental_id    |
+| staff         | staff_id     |
+| store         | store_id     |
++---------------+--------------+
+```
 
 
