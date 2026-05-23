@@ -47,3 +47,14 @@ customer         | customer_id
 ## Ответы
 
 ### Задание 1
+
+Ставим MySQL 9 на wsl в Docker:
+```
+docker run --name mysql-sakila \
+  -e MYSQL_ROOT_PASSWORD=rootpass \
+  -e MYSQL_DATABASE=sakila \
+  -p 3306:3306 \
+  -d mysql:9.0
+ ``` 
+<img width="1104" height="384" alt="image" src="https://github.com/user-attachments/assets/e7ca1546-2a85-4d8b-9712-15b947187d17" />
+
