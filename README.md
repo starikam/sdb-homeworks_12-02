@@ -66,6 +66,9 @@ docker run --name mysql-viktorov \
 <img width="768" height="342" alt="image" src="https://github.com/user-attachments/assets/02866359-1488-4d3d-a95d-e914afa37f81" />
 
 ### 1.3
+```
+SELECT User, Host FROM mysql.user;
+```
 
 <img width="398" height="255" alt="image" src="https://github.com/user-attachments/assets/a5780f68-c504-4915-a8e3-ac7835eea307" />
 
