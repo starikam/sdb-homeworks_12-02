@@ -50,11 +50,11 @@ customer         | customer_id
 
 Ставим MySQL 9 на wsl в Docker:
 ```
-docker run --name mysql-sakila \
-  -e MYSQL_ROOT_PASSWORD=rootpass \
-  -e MYSQL_DATABASE=sakila \
+docker run --name mysql-viktorov \
+  -e MYSQL_ROOT_PASSWORD=mypass \
+  -e MYSQL_DATABASE=viktorov \
   -p 3306:3306 \
   -d mysql:9.0
  ``` 
-<img width="1104" height="384" alt="image" src="https://github.com/user-attachments/assets/e7ca1546-2a85-4d8b-9712-15b947187d17" />
 
+<img width="1087" height="173" alt="image" src="https://github.com/user-attachments/assets/9cf895ea-8dac-464b-930c-c127276db8ca" />
