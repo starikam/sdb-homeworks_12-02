@@ -70,19 +70,25 @@ docker run --name mysql-viktorov \
 <img width="398" height="255" alt="image" src="https://github.com/user-attachments/assets/a5780f68-c504-4915-a8e3-ac7835eea307" />
 
 ### 1.4
-``` GRANT ALL PRIVILEGES ON *.* TO 'sys_temp'@'localhost';
-FLUSH PRIVILEGES; ```
+```
+GRANT ALL PRIVILEGES ON *.* TO 'sys_temp'@'localhost';
+FLUSH PRIVILEGES;
+```
 
 <img width="578" height="147" alt="image" src="https://github.com/user-attachments/assets/3568b14e-6ef2-40f5-98a1-1df2ff2f5718" />
 
 ### 1.5
-``` SHOW GRANTS FOR 'sys_temp'@'localhost'; ```
+``` 
+SHOW GRANTS FOR 'sys_temp'@'localhost';
+```
 
 <img width="1403" height="770" alt="image" src="https://github.com/user-attachments/assets/78e2c60c-e126-46e6-a29f-561ddc670a2d" />
 
 ### 1.6
 Переподключаемся к БД
-``` sudo docker exec -it mysql-viktorov mysql -u sys_temp -p ```
+``` 
+sudo docker exec -it mysql-viktorov mysql -u sys_temp -p
+```
 
 <img width="778" height="290" alt="image" src="https://github.com/user-attachments/assets/00145163-85ca-4865-8ecc-d2640c51a4e3" />
 
@@ -90,23 +96,29 @@ FLUSH PRIVILEGES; ```
 
 ### 1.7
 Копируем в контейнер скачанный дамп:
-``` sudo docker cp sakila-data.sql mysql-viktorov:/tmp/
-sudo docker cp sakila-schema.sql mysql-viktorov:/tmp/ ```
+```
+sudo docker cp sakila-data.sql mysql-viktorov:/tmp/
+sudo docker cp sakila-schema.sql mysql-viktorov:/tmp/
+```
 
 
 <img width="851" height="150" alt="image" src="https://github.com/user-attachments/assets/fcdccf44-e67a-4d33-bb53-d9f0643cf78b" />
 
 Восстанавливаем дамп:
-```  SOURCE /tmp/sakila-schema.sql;
-SOURCE /tmp/sakila-data.sql; ```
+```
+SOURCE /tmp/sakila-schema.sql;
+SOURCE /tmp/sakila-data.sql;
+```
 
 <img width="383" height="203" alt="image" src="https://github.com/user-attachments/assets/9bd5dfb7-8411-448e-8ca1-4c26d41245e7" />
 
 <img width="372" height="232" alt="image" src="https://github.com/user-attachments/assets/73b41720-acaf-475c-bbea-90b098ee1b27" />
 
 ### 1.8
-``` USE sakila;
-SHOW TABLES; ```
+```
+USE sakila;
+SHOW TABLES;
+```
 
 <img width="316" height="635" alt="image" src="https://github.com/user-attachments/assets/bcbfd283-43dc-48ef-8773-90ba94805c1a" />
 
